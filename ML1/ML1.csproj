@@ -139,10 +139,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="packages.config">
       <SubType>Designer</SubType>
-    </None>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -162,18 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\14.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\21.png" />
-    <Resource Include="Resources\22.png" />
-    <Resource Include="Resources\23.png" />
-    <Resource Include="Resources\24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\1_part.png" />
-    <Resource Include="Resources\2_part.png" />
-    <Resource Include="Resources\3_part.png" />
-    <Resource Include="Resources\4_part.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

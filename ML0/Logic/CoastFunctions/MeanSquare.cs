@@ -1,0 +1,16 @@
+﻿using System;
+
+namespace ML0.NeuralNetwork
+{
+    class MeanSquare : ICoast
+    {
+        public double Real(double expected, double actual)
+        {
+            return Math.Pow(expected - actual, 2);
+        }
+        public double Derivative(double expected, double actual)
+        {
+            return expected - actual;
+        }
+    }
+}

@@ -127,10 +127,8 @@ namespace ML1.NeuralNetwork
                 var nextLayerBegin = firstNeuronInLayer + layers[i];
                 for (var j = prevLayerBegin; j < prevLayerBegin + layers[i]; j++)
                 {
-                    Console.Write(string.Format("from {0} to", j));
                     for (var k = nextLayerBegin; k < nextLayerBegin + layers[i + 1]; k++)
                     {
-                        Console.Write(string.Format(" {0}", k));
                         synapses[synapseIndex] = new Synapse
                         {
                             P = _neurons[j],
@@ -140,9 +138,7 @@ namespace ML1.NeuralNetwork
                         };
                         synapseIndex++;
                     }
-                    Console.Write("\n");
                 }
-                Console.Write("\n");
                 firstNeuronInLayer += layers[i];
             }
             return synapses;
@@ -165,7 +161,7 @@ namespace ML1.NeuralNetwork
         private double Coast(double[] outputs, double[] results)
         {
             double loss = 0;
-            for (var i = _neuronsCount; i > _neuronsCount - _outputCount - 1; i--)
+            for (var i = 0; i < _outputCount; i++)
             {
                 _neurons[_neuronsCount - _outputCount + i].E = _coast.Derivative(results[i], outputs[i]);
                 loss += _coast.Real(results[i], outputs[i]);

@@ -10,7 +10,7 @@ namespace ML1.NeuralNetwork
         }
         public double Derivative(double expected, double actual)
         {
-            return 2 * (expected - actual);
+            return expected - actual;
         }
     }
 }

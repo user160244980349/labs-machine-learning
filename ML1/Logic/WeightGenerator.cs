@@ -12,7 +12,7 @@ namespace ML1
         }
         public double Get()
         {
-            return (_random.NextDouble() - 0.5) * 2;
+            return (_random.NextDouble() - 0.5) * 0.5;
         }
     }
 }

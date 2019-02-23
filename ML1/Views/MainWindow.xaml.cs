@@ -29,10 +29,10 @@ namespace ML1.Views
         {
             var images = new Bitmap[]
             {
-                Properties.Resources._1_part,
-                Properties.Resources._2_part,
-                Properties.Resources._3_part,
-                Properties.Resources._4_part,
+                Properties.Resources._11,
+                Properties.Resources._12,
+                Properties.Resources._13,
+                Properties.Resources._14,
             };
             WindowModel.Trainigs = GetPicturesBitmaps(images);
         }
@@ -56,19 +56,15 @@ namespace ML1.Views
                 bitmaps[i] = new double[images[i].Height * images[i].Width];
                 for (var y = 0; y < images[i].Height; y++)
                 {
-                    Console.Write(string.Format("\n"));
                     for (var x = 0; x < images[i].Width; x++)
                     {
                         Color c = images[i].GetPixel(x, y);
                         double bw = 1 - Math.Round((double)(c.R + c.G + c.B) / 255 / 3);
                         bitmaps[i][j] = bw;
-                        Console.Write(string.Format(" {0}", bitmaps[i][j]));
                         j++;
                     }
                 }
-                Console.Write(string.Format("\n"));
             }
-            Console.Write(string.Format("\n\n"));
 
             return bitmaps;
         }
